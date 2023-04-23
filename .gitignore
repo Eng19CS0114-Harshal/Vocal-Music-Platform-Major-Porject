@@ -1,1 +1,13 @@
 model_setup.py
+.prettierignore
+*.log
+package-lock.json
+*.yml
+.json
+tests
+api 
+scripts/*.json
+scrpits/rank_predictor.pkl
+scripts/__pycache__
+scripts/*.pyc
+.eslintrc.json
