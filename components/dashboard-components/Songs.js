@@ -60,7 +60,6 @@ const Songs = ({
     setIsLoading(true);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    // console.log("Song User get state: ", userState);
     var raw = JSON.stringify({
       genre: userState.userPreference,
     });
@@ -73,7 +72,7 @@ const Songs = ({
     };
 
     await fetch(
-      "myapi.randomcommentapi/",
+      "<URL-ENDPOINT-TO-API>",
       requestOptions
     )
       .then((response) => response.json())
@@ -140,7 +139,7 @@ const Songs = ({
     };
 
     fetch(
-      "random.myreapi.random/",
+      "<URL-API-ENDPOINT>",
       requestOptions
     )
       .then((response) => response.json())
@@ -150,19 +149,6 @@ const Songs = ({
       })
       .catch((error) => console.log("error", error));
 
-    // fetch(url, {
-    //   method: "POST",
-    //   mode: "cors",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify("good song"),
-    // })
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.Toxic) commentValid = false;
-    //   })
-    //   .catch((e) => console.log(e));
   };
 
   const postComment = async () => {
